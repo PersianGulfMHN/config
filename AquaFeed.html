@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automatic Aquarium Feeder</title>
+    <style>
+        body {
+            background-color: #E0E0E0; /* Light Blue color */
+        }
+        .bold {
+            font-weight: bold;
+        }
+        li {
+            padding-bottom: 2em; /* Adjust the value as desired */
+            border-top: 1px solid black; /* Add a top border */
+        }
+        .custom-button {
+            font-weight: bold;
+            background-color: lightgreen;
+            border: 1px solid darkgreen;
+            border-radius: 2px;
+            padding: 5px 10px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .custom-button:hover {
+            background-color: limegreen;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+        .custom-button:active {
+            background-color: forestgreen;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <h2>Automatic Aquarium Feeder</h2>
+    <pre>
+                 __,
+               .-'_-'`
+             .' {`
+         .-'````'-.    .-'``'.
+       .'(0)       '._/ _.-.  `\
+      }     '. ))    _&lt;`    )`  |
+       `-.,\'.\_,.-\` \`---; .' /
+            )  )       '-.  '--:
+           ( ' (          ) '.  \
+            '.  )      .'(   /   )
+              )/      (   '.    /
+                       '._( ) .'
+                           ( (
+                            `-.
+    </pre>
+    <p><span class="bold">Control Panel</span></p>
+    <ul>
+        <li>Connect to WiFi   (اتصال به شبکه اینترنت)
+            <ul>
+                <input type="text" id="ssid" placeholder="WiFi SSID نام شبکه وای فای شما" />
+                <input type="password" id="password" placeholder="WiFi Password پسورد وای فای" />
+            </ul>
+        </li>
+        <li style="border-top: 1px solid black;">Time Settings     (تنظیمات ساعت)
+            <ul>
+                    <button class="custom-button" onclick="handleButtonClick()">Adjust time<br>تنظیم ساعت</button>
+            </ul>
+        </li>
+        <li>Feedings per Day  (تعداد وعده های غذایی)
+            <ul>
+                <li>
+                    <input type="radio" id="every24h" name="feedings" value="every24h">
+                    <label for="every24h" style="margin-right: 10px;">every 24 H (هر 24 ساعت)</label>
+                    <input type="radio" id="every12h" name="feedings" value="every12h">
+                    <label for="every12h" style="margin-right: 10px;">every 12 H (هر 12 ساعت)</label>
+                    <input type="radio" id="every8h" name="feedings" value="every8h">
+                    <label for="every8h" style="margin-right: 10px;">every 8 H (هر 8 ساعت)</label>
+                </li>
+            </ul>
+        </li>
+        <li>Rotation Settings (چرخش مخزن غذا در هر وعده)
+            <ul>
+                <li>
+                    <input type="radio" id="rotate1" name="rotation" value="rotate1">
+                    <label for="rotate1" style="margin-right: 10px;">1 time (یک بار)</label>
+                    <input type="radio" id="rotate2" name="rotation" value="rotate2">
+                    <label for="rotate2" style="margin-right: 10px;">2 times (دو بار)</label>
+                    <input type="radio" id="rotate3" name="rotation" value="rotate3">
+                    <label for="rotate3" style="margin-right: 10px;">3 times (سه بار)</label>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        const ssidInput = document.getElementById('ssid');
+        const passwordInput = document.getElementById('password');
+
+        ssidInput.addEventListener('input', (event) => {
+            const ssid = event.target.value;
+            // Store the SSID value in your preferred data storage.
+        });
+
+        passwordInput.addEventListener('input', (event) => {
+            const password = event.target.value;
+            // Store the password value in your preferred data storage.
+        });
+
+        function handleButtonClick() {
+            // Code to execute when the button is clicked
+            console.log('Button clicked!');
+        }
+    </script>
+</body>
+</html>
